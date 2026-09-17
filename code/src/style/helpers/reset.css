@@ -1,0 +1,116 @@
+/* ==========================================================================
+   Modern CSS Reset
+   ========================================================================== */
+
+/* Box-Sizing global auf border-box setzen */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Standard-Margins/Paddings entfernen */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Root & Body */
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Bilder, Videos etc. responsive machen */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* Formularelemente erben Schrift statt Browser-Default */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+/* Buttons zurücksetzen */
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Textumbruch in langen Wörtern verhindern von Overflow */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* Standard-Listenstile entfernen */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Links ohne Standard-Styling */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Tabellen */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Textareas nur vertikal resizebar */
+textarea {
+  resize: vertical;
+}
+
+/* Fokus-Sichtbarkeit für Tastaturnutzer erhalten */
+:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
+
+/* Reduzierte Bewegung respektieren */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* #root / #__next volle Höhe für SPA-Frameworks */
+#root,
+#__next {
+  isolation: isolate;
+}

@@ -1,0 +1,164 @@
+/* ==========================================================================
+   main.css – globales Layout (Header, Footer, Main-Wrapper)
+   Gilt für alle Seiten
+   ========================================================================== */
+
+:root {
+  --color-bg: #ffffff;
+  --color-text: #1a1a1a;
+  --color-primary: #2563eb;
+  --color-primary-hover: #1d4ed8;
+  --color-border: #e5e7eb;
+  --color-muted: #6b7280;
+
+  --header-height: 64px;
+  --max-width: 1200px;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 2rem;
+
+  --font-base: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+body {
+  font-family: var(--font-base);
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* ==========================================================================
+   Header
+   ========================================================================== */
+
+.header {
+  height: var(--header-height);
+  border-bottom: 1px solid var(--color-border);
+  position: sticky;
+  top: 0;
+  background-color: var(--color-bg);
+  z-index: 100;
+}
+
+.header__navbar {
+  max-width: var(--max-width);
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 var(--spacing-lg);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-lg);
+}
+
+.header__logo-link {
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--color-text);
+}
+
+.header__nav {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-lg);
+  flex: 1;
+  justify-content: space-between;
+}
+
+.header__nav-list {
+  display: flex;
+  gap: var(--spacing-lg);
+}
+
+.nav__list-link {
+  color: var(--color-muted);
+  font-weight: 500;
+  transition: color 0.15s ease;
+}
+
+.nav__list-link:hover {
+  color: var(--color-text);
+}
+
+.header__user-nav {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.user-nav__button {
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.user-nav__button#login_btn {
+  color: var(--color-text);
+}
+
+.user-nav__button#register_btn {
+  background-color: var(--color-primary);
+  color: #fff;
+}
+
+.user-nav__button#register_btn:hover {
+  background-color: var(--color-primary-hover);
+}
+
+.user-nav__link {
+  color: var(--color-text);
+  font-weight: 500;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+/* ==========================================================================
+   Main-Wrapper
+   ========================================================================== */
+
+.main {
+  flex: 1;
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--spacing-lg);
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+
+.footer {
+  border-top: 1px solid var(--color-border);
+  padding: var(--spacing-lg);
+}
+
+.footer__inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--spacing-md);
+  color: var(--color-muted);
+  font-size: 0.9rem;
+}
+
+.footer__nav-list {
+  display: flex;
+  gap: var(--spacing-md);
+}
+
+.footer__nav-link {
+  color: var(--color-muted);
+}
+
+.footer__nav-link:hover {
+  color: var(--color-text);
+}

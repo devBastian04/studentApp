@@ -1,3 +1,3 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const _DEBUG = true
-})
+  const _DEBUG = true;
+});
