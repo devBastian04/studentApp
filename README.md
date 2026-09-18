@@ -1,48 +1,45 @@
-🎓 Student App
+# 🎓 Student App
 
 Eine einfache Web-App für Studenten.
 
-🚀 Vorschau starten
+## 🚀 Vorschau starten
 
-Um die App lokal zu starten, gehe wie folgt vor:
+Um die App lokal mit dem optimierten FastAPI-Server zu starten, gehe wie folgt vor:
 
-1. In den code-Ordner wechseln
+### 1. Abhängigkeiten installieren
 
-Öffne das Terminal und führe aus:
+Stelle sicher, dass du dich im Hauptverzeichnis des Projekts befindest (wo die `requirements.txt` liegt). Öffne dein Terminal und installiere die benötigten Pakete:
 
-cd code
+```bash
+pip install -r requirements.txt
+```
 
-2. Lokalen Server starten
+### 2. Lokalen Server starten
 
-Starte anschließend einen Python-Webserver:
+Starte den Server mit automatischem Live-Reload im Terminal:
 
-python3 -m http.server 8000
+```bash
+uvicorn main:app --port 5500 --reload
+```
 
+Der Server läuft nun stabil und performant auf Port **5500**.
 
-Der Server läuft nun auf Port 8000.
+### 3. Vorschau öffnen
 
-3. Vorschau öffnen
+- **Lokal auf deinem PC:** Öffne einfach [http://localhost:5500](http://localhost:5500) im Browser.
+- **In einer Cloud-Umgebung (z.B. Gitpod / GitHub Codespaces):** Öffne den Bereich **PORTS** in deiner Entwicklungsumgebung und klicke auf die weitergeleitete Adresse für Port **5500**.
 
-Öffne in deiner Entwicklungsumgebung den Bereich PORTS.
+_Hinweis: Dank der Konfiguration in der `main.py` wirst du direkt auf deine App weitergeleitet. Du musst dich nicht mehr durch Ordnerstrukturen klicken!_
 
-Dort findest du den weitergeleiteten Port 8000. Öffne die angezeigte weitergeleitete Adresse.
+## 📁 Projektstruktur
 
-4. code-Ordner öffnen
-
-Nach dem Öffnen der Adresse siehst du zunächst die verfügbaren Ordner und Dateien.
-
-Navigiere dort in den Ordner:
-
-code/
-
-
-Anschließend kannst du die Student App im Browser aufrufen.
-
-📁 Projektstruktur
+```text
 Student App/
-└── code/
-    ├── ...
-    └── ...
+├── code/               # Enthält deine HTML-, CSS- und JS-Dateien
+│   ├── index.html      # Hauptseite deiner App
+│   └── ...
+├── main.py             # Der FastAPI-Webserver
+└── requirements.txt    # Projektabhängigkeiten (fastapi, uvicorn)
+```
 
-
-Hinweis: Der Python-Server muss während der Nutzung der Vorschau im Terminal weiterlaufen.
+⚠️ **Hinweis:** Das Terminal mit dem `uvicorn`-Befehl muss während der gesamten Entwicklung geöffnet bleiben. Sobald du Dateien im `code`-Ordner änderst, ist das Update sofort im Browser verfügbar.

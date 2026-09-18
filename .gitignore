@@ -1,1 +1,17 @@
+# Umgebungsvariablen & Geheimnisse (Sicherheit)
 .env
+.env.*
+
+# Python-Systemdateien (wichtig: zwei Unterstriche am Anfang und Ende!)
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Lokale virtuelle Python-Umgebungen (falls du mal eine nutzt)
+.venv/
+venv/
+env/
+
+# Betriebssystem-Restdaten
+.DS_Store
+Thumbs.db

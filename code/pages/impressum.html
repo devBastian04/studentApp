@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Impressum - Schüler App</title>
+    <!-- STYLE / CSS -->
+    <link rel="stylesheet" href="../src/style/helpers/reset.css" />
+    <link rel="stylesheet" href="../src/style/main.css" />
+    <link rel="stylesheet" href="../src/style/impressum.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__navbar">
+        <div class="header__logo">
+          <a href="/" class="header__logo-link">Schüler App</a>
+        </div>
+
+        <nav class="header__nav">
+          <ul class="header__nav-list">
+            <li class="nav__list-item">
+              <a href="/faecher" class="nav__list-link">Fächer</a>
+            </li>
+            <li class="nav__list-item">
+              <a href="/stundenplan" class="nav__list-link">Stundenplan</a>
+            </li>
+          </ul>
+
+          <ul class="header__user-nav" id="guest_nav">
+            <li class="user-nav__item">
+              <button class="user-nav__button" id="login_btn">Anmelden</button>
+            </li>
+            <li class="user-nav__item">
+              <button class="user-nav__button" id="register_btn">
+                Registrieren
+              </button>
+            </li>
+          </ul>
+
+          <ul class="header__user-nav" id="user_nav" hidden>
+            <li class="user-nav__item">
+              <a href="/profil" class="user-nav__link" id="profile_link"
+                >Profil</a
+              >
+            </li>
+            <li class="user-nav__item">
+              <button class="user-nav__button" id="logout_btn">Abmelden</button>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main impressum-main">
+      <section class="impressum__section">
+        <h1 class="impressum__title">Impressum</h1>
+
+        <div class="impressum__block">
+          <h2 class="impressum__subtitle">Angaben gemäß § 5 DDG</h2>
+          <p class="impressum__text">
+            Vorname Nachname<br />
+            Straße Hausnummer<br />
+            PLZ Ort
+          </p>
+        </div>
+
+        <div class="impressum__block">
+          <h2 class="impressum__subtitle">Kontakt</h2>
+          <p class="impressum__text">
+            E-Mail: name@beispiel.de<br />
+            Telefon: +49 000 0000000
+          </p>
+        </div>
+
+        <div class="impressum__block">
+          <h2 class="impressum__subtitle">Verantwortlich für den Inhalt</h2>
+          <p class="impressum__text">
+            Vorname Nachname<br />
+            Straße Hausnummer<br />
+            PLZ Ort
+          </p>
+        </div>
+
+        <div class="impressum__block">
+          <h2 class="impressum__subtitle">Registereintrag</h2>
+          <p class="impressum__text impressum__text--prose">
+            Nicht eingetragen (keine Registerpflicht für dieses Projekt).
+          </p>
+        </div>
+
+        <div class="impressum__block">
+          <h2 class="impressum__subtitle">Haftungsausschluss</h2>
+          <p class="impressum__text">
+            Die Inhalte dieser Seite wurden mit größtmöglicher Sorgfalt
+            erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der
+            Inhalte kann jedoch keine Gewähr übernommen werden.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer impressum-footer">
+      <div class="footer__inner">
+        <p class="footer__copyright">
+          &copy; 2026 Schüler App. Alle Rechte vorbehalten.
+        </p>
+
+        <ul class="footer__nav-list">
+          <li class="footer__nav-item">
+            <a href="./impressum.html" class="footer__nav-link">Impressum</a>
+          </li>
+          <li class="footer__nav-item">
+            <a href="./datenschutz.html" class="footer__nav-link">Datenschutz</a>
+          </li>
+          <li class="footer__nav-item">
+            <a href="/kontakt" class="footer__nav-link">Kontakt</a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+
+    <!-- Script -->
+    <script src="src/js/script.js"></script>
+  </body>
+</html>
