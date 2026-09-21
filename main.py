@@ -2,6 +2,7 @@ from pathlib import Path
 from fastapi import FastAPI
 from fastapi.staticfiles import StaticFiles
 
+
 app = FastAPI(
     title="Student Management System",
     description="A frontend-only student management system.",
